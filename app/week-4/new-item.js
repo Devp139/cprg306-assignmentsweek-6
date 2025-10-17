@@ -1,12 +1,12 @@
-"use client"; // ✅ Required for client-side interactivity
+"use client"; 
 
 import { useState } from "react";
 
 export default function NewItem() {
-  // ✅ Step 3: Initialize state
+  
   const [quantity, setQuantity] = useState(1);
 
-  // ✅ Step 4: Functions
+  
   const increment = () => {
     setQuantity((prev) => (prev < 20 ? prev + 1 : prev));
   };
@@ -15,10 +15,10 @@ export default function NewItem() {
     setQuantity((prev) => (prev > 1 ? prev - 1 : prev));
   };
 
-  // ✅ Step 5 + 6: Render & Style
+  
   return (
     <div className="flex items-center gap-4 p-6 bg-gray-100 rounded-xl shadow-md w-fit">
-      {/* Decrement Button */}
+      
       <button
         onClick={decrement}
         disabled={quantity === 1}
@@ -29,10 +29,10 @@ export default function NewItem() {
         -
       </button>
 
-      {/* Current Quantity */}
+      
       <span className="text-xl font-bold">{quantity}</span>
 
-      {/* Increment Button */}
+      
       <button
         onClick={increment}
         disabled={quantity === 20}
