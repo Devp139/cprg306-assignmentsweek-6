@@ -17,7 +17,7 @@ export default function ItemList() {
     household: "🧻",
   };
 
-  // 🔹 Sorting logic
+  
   let sortedItems = [...itemsData];
   if (sortBy === "name") {
     sortedItems.sort((a, b) => a.name.localeCompare(b.name));
@@ -25,7 +25,7 @@ export default function ItemList() {
     sortedItems.sort((a, b) => a.category.localeCompare(b.category));
   }
 
-  // 🔹 Grouping logic (for bonus button)
+
   const groupedItems = sortedItems.reduce((groups, item) => {
     const cat = item.category;
     if (!groups[cat]) groups[cat] = [];
@@ -35,7 +35,7 @@ export default function ItemList() {
 
   return (
     <div>
-      {/* Buttons */}
+      
       <div className="flex gap-3 mb-6">
         <button
           onClick={() => setSortBy("name")}
@@ -63,7 +63,7 @@ export default function ItemList() {
         </button>
       </div>
 
-      {/* Render items */}
+      
       {sortBy === "group" ? (
         <div className="space-y-5">
           {Object.keys(groupedItems)

@@ -32,7 +32,7 @@ export default function NewItem() {
       
       <span className="text-xl font-bold">{quantity}</span>
 
-      
+      s
       <button
         onClick={increment}
         disabled={quantity === 20}

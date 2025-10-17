@@ -1,7 +1,7 @@
 import Item from "./item";
 
 export default function ItemList() {
-  // Your shopping list data
+  
   const items = [
     { name: "milk, 4 L 🥛", quantity: 1, category: "dairy" },
     { name: "bread 🍞", quantity: 2, category: "bakery" },

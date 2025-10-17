@@ -3,12 +3,12 @@
 import { useState } from "react";
 
 export default function NewItem() {
-  // State variables
+ 
   const [name, setName] = useState("");
   const [quantity, setQuantity] = useState(1);
   const [category, setCategory] = useState("produce");
 
-  // Increment and decrement quantity
+ 
   const increment = () => {
     setQuantity((prev) => (prev < 20 ? prev + 1 : prev));
   };
@@ -17,7 +17,7 @@ export default function NewItem() {
     setQuantity((prev) => (prev > 1 ? prev - 1 : prev));
   };
 
-  // Handle form submission
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -26,7 +26,7 @@ export default function NewItem() {
 
     alert(`Item: ${name}\nQuantity: ${quantity}\nCategory: ${category}`);
 
-    // Reset form fields
+   
     setName("");
     setQuantity(1);
     setCategory("produce");
@@ -39,7 +39,7 @@ export default function NewItem() {
       </h1>
 
       <form onSubmit={handleSubmit} className="space-y-4">
-        {/* Name Field */}
+        
         <div>
           <label className="block text-gray-700 font-medium mb-1">
             Item Name
@@ -54,9 +54,9 @@ export default function NewItem() {
           />
         </div>
 
-        {/* Quantity + Category Row */}
+        
         <div className="flex items-center justify-between gap-2">
-          {/* Quantity Field */}
+         
           <div className="flex items-center gap-2">
             <input
               type="text"
@@ -80,7 +80,7 @@ export default function NewItem() {
             </button>
           </div>
 
-          {/* Category Dropdown */}
+          
           <select
             value={category}
             onChange={(e) => setCategory(e.target.value)}
@@ -100,7 +100,7 @@ export default function NewItem() {
           </select>
         </div>
 
-        {/* Submit Button */}
+        
         <button
           type="submit"
           className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 rounded-lg transition"
